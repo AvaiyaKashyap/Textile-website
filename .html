@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganeshify - Premium Textile Manufacturer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hero-pattern {
+            background-image: url('https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        
+        .fabric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .texture-bg {
+            background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+            opacity: 0.05;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #a78bfa;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-indigo-600 font-serif">Ganeshify</span>
+                    </a>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#fabrics" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Fabrics</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">About Us</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Contact Us
+                    </a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                <a href="#fabrics" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Fabrics</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About Us</a>
+                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-indigo-600 hover:text-indigo-800 hover:bg-gray-50">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern bg-indigo-900 bg-opacity-90 relative pt-24 pb-32 md:pt-32 md:pb-48">
+        <div class="absolute inset-0 texture-bg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                        <span class="block">Premium Woven</span>
+                        <span class="block text-indigo-300">Textile Solutions</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Ganeshify manufactures high-quality fabrics for fashion brands, exporters, and sourcing agents worldwide.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#fabrics" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                View Fabrics
+                            </a>
+                            <a href="#contact" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                                Get in Touch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+                        <img class="w-full rounded-lg" src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Textile rolls at Ganeshify">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fabric Showcase -->
+    <section id="fabrics" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Our Fabric Collection
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Premium quality fabrics for diverse applications
+                </p>
+            </div>
+            
+            <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Fabric Card 1 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Cotton Shirting Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Premium Cotton Shirting</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 100% Cotton</p>
+                            <p><span class="font-medium">GSM:</span> 120-140</p>
+                            <p><span class="font-medium">Weave:</span> Plain/Twill</p>
+                            <p><span class="font-medium">Finish:</span> Mercerized</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Shirting
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Formal Wear
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fabric Card 2 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Poly-Cotton Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Poly-Cotton Workwear</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 65% Polyester, 35% Cotton</p>
+                            <p><span class="font-medium">GSM:</span> 180-220</p>
+                            <p><span class="font-medium">Weave:</span> Twill</p>
+                            <p><span class="font-medium">Finish:</span> Anti-pill</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Workwear
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Uniforms
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fabric Card 3 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Stretch Denim Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Stretch Denim</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 98% Cotton, 2% Spandex</p>
+                            <p><span class="font-medium">GSM:</span> 250-300</p>
+                            <p><span class="font-medium">Weave:</span> 3/1 Twill</p>
+                            <p><span class="font-medium">Finish:</span> Enzyme Wash</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Bottomwear
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Fashion Denim
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fabric Card 4 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Linen Blend Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Linen Blend</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 70% Cotton, 30% Linen</p>
+                            <p><span class="font-medium">GSM:</span> 140-160</p>
+                            <p><span class="font-medium">Weave:</span> Plain</p>
+                            <p><span class="font-medium">Finish:</span> Softener</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Summer Wear
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Casual Shirts
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fabric Card 5 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Suiting Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Premium Suiting</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 100% Wool</p>
+                            <p><span class="font-medium">GSM:</span> 280-320</p>
+                            <p><span class="font-medium">Weave:</span> Twill/Herringbone</p>
+                            <p><span class="font-medium">Finish:</span> Super 120s</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Suiting
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Formal Wear
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fabric Card 6 -->
+                <div class="fabric-card transition-all duration-300 rounded-lg overflow-hidden shadow-md bg-white">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Functional Fabric">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900">Functional Performance</h3>
+                        <div class="mt-2 text-sm text-gray-500">
+                            <p><span class="font-medium">Composition:</span> 92% Polyester, 8% Spandex</p>
+                            <p><span class="font-medium">GSM:</span> 150-180</p>
+                            <p><span class="font-medium">Weave:</span> Double Knit</p>
+                            <p><span class="font-medium">Finish:</span> Moisture Wicking</p>
+                        </div>
+                        <div class="mt-4">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800">
+                                Activewear
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 ml-2">
+                                Sportswear
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                    Request Fabric Samples
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="lg:col-span-6">
+                    <img class="rounded-lg shadow-xl" src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=80" alt="Ganeshify manufacturing facility">
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-6">
+                    <h2 class="text-3xl font-extrabold text-gray-900">
+                        About Ganeshify
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500">
+                        Established in 2005, Ganeshify has grown from a small weaving unit to a respected textile manufacturer serving clients across 15 countries.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-md p-2">
+                                <i class="fas fa-medal text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Vision</h3>
+                                <p class="mt-1 text-gray-500">
+                                    To become the preferred textile partner for global fashion brands by delivering consistent quality and innovative fabric solutions.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-md p-2">
+                                <i class="fas fa-cogs text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Technology</h3>
+                                <p class="mt-1 text-gray-500">
+                                    We utilize state-of-the-art Airjet Looms that ensure precision weaving with minimal defects, delivering fabrics with excellent dimensional stability and consistent quality.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex items-start">
+                            <div class="flex-shrink-0 bg-indigo-100 rounded-md p-2">
+                                <i class="fas fa-award text-indigo-600 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Commitment</h3>
+                                <p class="mt-1 text-gray-500">
+                                    Every meter of fabric undergoes rigorous quality checks to meet international standards. We're committed to sustainable practices and ethical manufacturing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    What Our Clients Say
+                </h2>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Trusted by fashion brands and manufacturers worldwide
+                </p>
+            </div>
+            
+            <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-quote-left text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-600 italic">
+                                "Ganeshify has been our reliable fabric supplier for over 5 years. Their cotton shirting fabrics have excellent color fastness and consistent quality batch after batch."
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-base font-medium text-gray-900">Rajesh Mehta</p>
+                                <p class="text-sm text-gray-500">CEO, Urban Threads Apparel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-quote-left text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-600 italic">
+                                "The poly-cotton workwear fabrics from Ganeshify meet all our durability requirements. Their technical team understands our needs and delivers accordingly."
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-base font-medium text-gray-900">Sarah Johnson</p>
+                                <p class="text-sm text-gray-500">Procurement Manager, WorkPro Uniforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-quote-left text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-600 italic">
+                                "As an exporter, we need partners who understand international quality standards. Ganeshify's fabrics consistently pass all our lab tests for European markets."
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-base font-medium text-gray-900">Michael Chen</p>
+                                <p class="text-sm text-gray-500">Director, Global Textile Exports</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm lg:col-span-2">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-quote-left text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-600 italic">
+                                "What impressed us most was Ganeshify's ability to develop custom fabrics according to our specifications. Their R&D team worked closely with us to create a unique stretch denim that became our bestseller."
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-base font-medium text-gray-900">Amit Patel</p>
+                                <p class="text-sm text-gray-500">Head of Product, Denim Culture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-quote-left text-indigo-400 text-2xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <p class="text-gray-600 italic">
+                                "Their linen blend fabrics have perfect drape and texture for our summer collections. Reliable delivery even during peak seasons."
+                            </p>
+                            <div class="mt-4">
+                                <p class="text-base font-medium text-gray-900">Elena Rodriguez</p>
+                                <p class="text-sm text-gray-500">Design Director, Tropical Fashions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-indigo-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div class="text-white">
+                    <h2 class="text-3xl font-extrabold sm:text-4xl">
+                        Get in Touch
+                    </h2>
+                    <p class="mt-4 text-lg text-indigo-100">
+                        Interested in our fabrics? Contact our sales team for samples, pricing, or any inquiries.
+                    </p>
+                    
+                    <div class="mt-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-indigo-300 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Our Factory</h3>
+                                <p class="mt-1 text-indigo-100">
+                                    Textile Park, Phase II<br>
+                                    Surat - 394230<br>
+                                    Gujarat, India
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-envelope text-indigo-300 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Email Us</h3>
+                                <p class="mt-1 text-indigo-100">
+                                    sales@ganeshify.com<br>
+                                    info@ganeshify.com
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 flex items-start">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-phone-alt text-indigo-300 text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-white">Call Us</h3>
+                                <p class="mt-1 text-indigo-100">
+                                    +91 261 2456789<br>
+                                    +91 9876543210 (Sales)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 lg:mt-0">
+                    <div class="bg-white py-8 px-6 shadow rounded-lg sm:px-10">
+                        <form class="mb-0 space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <div class="mt-1">
+                                    <input id="name" name="name" type="text" required class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" required class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                                <div class="mt-1">
+                                    <input id="phone" name="phone" type="tel" class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="bg-gray-100 h-96">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.075881148158!2d72.8775623154029!3d21.14522448593673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be051f0a7e5d52b%3A0x6a8a11b3b7e4d4f7!2sSurat%20Textile%20Market!5e0!3m2!1sen!2sin!4v1623935400000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        Products
+                    </h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Cotton Fabrics</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Poly-Cotton Blends</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Stretch Fabrics</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Linen Blends</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        Company
+                    </h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#about" class="text-base text-gray-300 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Quality Assurance</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Sustainability</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        Resources
+                    </h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Fabric Guide</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Care Instructions</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Technical Specifications</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                        Connect
+                    </h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Instagram</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">YouTube</a></li>
+                        <li><a href="#" class="text-base text-gray-300 hover:text-white">WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 Ganeshify Textiles. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Scroll to target
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
